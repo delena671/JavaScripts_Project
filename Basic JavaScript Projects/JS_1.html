@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>I M Possible!</h2>
+        <p id="demo">Click the button to change the text in this paragraph.</p>
+        <p>I found an inspiration photo with the word impossible, written like, "I M Possible.":</p>
+        <button onclick="myFunction()">Try it</button>
+        <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Hello, World";
+            }
+            function myFunction(p1, p2) {
+                return p1 * p2;
+            }
+            document.getElementById("demo").innerHTML = myFunction(4,3);
+        </script>
+    </body>
+</html>
