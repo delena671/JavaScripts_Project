@@ -1,0 +1,6 @@
+KEY                         VALUE
+ALG1                      “Algebra 1”
+ALG2                    “Algebra 2”
+HIS                       “History”
+PHYS1                  “Physics 1”
+PE                         “Physical Education”
