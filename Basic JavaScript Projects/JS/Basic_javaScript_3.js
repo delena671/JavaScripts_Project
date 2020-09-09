@@ -40,3 +40,10 @@ function myFunction() {
     document.getElementById("demo").innerHTML = Math.asin(0.5);
 }
 
+var X = 5;
+X++;
+document.write(X);
+
+var X = 5.25;
+X--;
+document.write(X);
