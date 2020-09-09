@@ -7,5 +7,5 @@ function my_Dictionary() { //Creating a dictionary through JS
         Sound:"Bark!"
     };
     delete Animal.Sound; //This delete function is to remove the value
-    document.getElementById("Dictionary").inner = Animal.Sound; //Our output
+    document.getElementById("Dictionary").innerHTML = Animal.Sound; //Our output
 }
