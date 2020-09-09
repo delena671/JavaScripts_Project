@@ -2,31 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Another assignment</title>
-        <script src="Basic_JavaScript_3.js">
-            window.alert(Math.random()* 100); 
-        </script>
+        <title>Hello, World!</title>
+        <script src="./JS/Basic_javaScript_3.js"></script>
     </head>
-    <body>
-        <script src="Basic_JavaScript_3.js">
-            function Subtraction_Function() {
-                document.getElementById("Math").innerHTML = "5 - 2 =" + Subtraction
-            }  
+    <body> 
+
+        <script>
+            alert("Hello, World!");
         </script>
         <center>
-            <p>Addition is part of basic Math, clik the equation.</p>
-            <h1 onclick="this.innerHTML='4'">2+2=?</h1>
-            <p>Click the problem two times to display Subtraction</p>
-            <h1 ondblclick="this.innerHTML='15'">30-15=?</h1>
-            <p>Click once to display multiplication!</p>
-            <h1 onclick="this.innerHTML='1000'">100*10?</h1>
-            <p>Double tap</p>
-            <h1 ondblclick="this.innerHTML='5'">10/2?</h1>
-            <p>Click the problem</p>
-            <h1 onclick="this.innerHTML='34'">(4+8) * 9/3 -2=?</h1>
-            <h2 onclick="this.innerHTML='8.75'">35/4=?</h2>
-
-
+        <button onclick="addition_Function()" id="Math">
+            Add Me!
+        </button><br>
+        <button onclick="subtraction_Function()" id="Math">
+            Minus This!
+        </button><br>
+        <button onclick="multiplication_Function()" id="Math">
+            Multiply
+        </button><br>
+        <button onclick="division_Function()" id="Math">
+            Divide me!
+        </button><br>
+        <button onclick="more_Math()" id="Math">
+            From Left to Right!
+        </button><br>
+        <button onclick="modulus_Operator()" id="Math">
+            We have a remainder!
+        </button><br>
+        <button onclick="negation_Operator()" id="Math">
+            Sinister!
+        </button><br>
         </center>
     </body>
 </html>
