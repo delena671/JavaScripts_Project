@@ -39,7 +39,7 @@ function get_Date() {
 }
 
 function Age_Function() {
-    Age = document.getElementById("Age").nodeValue;
+    Age = document.getElementById("Age").value;
     if (Age >= 18) {
         Vote = "You are old enough to vote!";
     }
@@ -49,14 +49,14 @@ function Age_Function() {
     document.getElementById("How_old_are_you?").innerHTML = Vote;
 }
 
-function Time_function() {
+function time_function() {
     var Time = new Date ().getHours();
     var Reply;
     if (Time < 12 == Time > 0) {
         Reply = "It is morning time!";
     }
     else if (Time >12 == Time <0) {
-        Reply = "It is the afternoo.";
+        Reply = "It is the afternoon.";
     }
     else {
         Reply = "It is evening time.";
