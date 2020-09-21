@@ -3,10 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>Slideshow</title>
+        <script src="/Project9_countdown_slideshow/JS/main.js"></script>
         <script src="JS/main.js"></script>
         <link rel="stylesheet" type="text/css" href="CSS/main.css">
     </head>
     <body>
+        <p>How many seconds would you like to set your alarm for?</p>
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Click here</button>
+        <p id="timer"></p>
+        
         <!--Slideshow Container-->
         <div class="slideshow-container">
             <!--Full-width images with number and caption text-->

@@ -1,10 +1,10 @@
 function countdown() {
-    var seconds = document.getElementById("seconds").Value;
+    var seconds = document.getElementById("seconds").value;
     
     function tick() {
         seconds = seconds - 1;
-        Timer.innerHTML = seconds;
-        setTimeout(tick,1000);
+        timer.innerHTML = seconds;
+        setTimeout(tick, 1000);
     if(seconds == -1){
         alert("Time's up!");
     }
