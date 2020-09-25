@@ -30,10 +30,10 @@ function array_Function () {
 
 function constant_function() {
     const Musical_Instrument = {type:"guitar", brand:"Fender", color:"black"};
-    Musical_Intstrument.color = "blue";
-    Musical_Intstrument.price = "$900";
+    Musical_Instrument.color = "blue";
+    Musical_Instrument.price = "$900";
     document.getElementById("Constant").innerHTML = "The cost of the " +
-        Musical_Intstrument.type + " was " + Musical_Intstrument.price;
+        Musical_Instrument.type + " was " + Musical_Instrument.price;
 }
 
 var X = 82;
