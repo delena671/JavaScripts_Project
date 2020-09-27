@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html lang="en">
+<head>
+	<link rel="stylesheet" href="./css/one_page_website.css">
+	<meta charset="utf-8"> 
+	<title>Korea</title>
+	<script src="JS/one_page_website.js"></script>
+	<style>
+		p.dotted {
+			border-style: dotted;
+			border: 2px dotted #FF0000;
+			border-width: 2px
+		}
+	</style>
+</head>
+<body>
+	<center><h1>Seoul, South Korea</h1></center>
+	<center><img src="koreanflag.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor" alt="Korean Flag" width="500" height="333"></center>
+		<!--NAV-->
+		<div>
+			<div><center>
+				<ul>
+					<a href="#home" id="link"><li>HOME</li></a>
+					<a href="#gallery" id="link"><li>GALLERY</li></a>
+					<a href="#get more information" id="link"><li>RECIPES</li></a>
+				</ul>
+			</div></center>
+		</div>
+		<!--END NAV-->
+	<center>
+		<h1 class="nav">Sign up for free.</h1>
+		<form action="/action_page.php" method="get">
+			<label for="fname">First name:</label>
+			<p class="dotted"><input type="text" id="fname" name="fname"></p><br><br>
+			<label for="lname">Last name:</label>
+			<p class="dotted"><input type="text" id="lname" name="lname"></p><br><br>
+			<p class="dotted"><input type="submit" value="Submit"></p>
+		</form>
+	</center>
+</body>
+</html>
+
