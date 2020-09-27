@@ -1,0 +1,16 @@
+/*Width of the border*/
+input { 
+    width: 100%;
+}
+/*Adding padding*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+/*Adding color to the border*/
+input[type=text] {
+    border: 2px solid blueviolet;
+    border-radius: 4px;
+}
