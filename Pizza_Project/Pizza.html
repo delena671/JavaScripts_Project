@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pizza Drill Demo</title>
+        <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <script src="Pizza_JavaScript/Pizza.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="Pizza_CSS/Pizza.css"/>
+        <style>
+            .serif {
+                font-family: "Times New Roman", Times, serif;
+            }
+            .sansserif {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .monospace {
+                font-family: "Lucida Console", Courier, monospace;
+            }
+
+            h1 {
+                color:deepskyblue;
+            }
+
+            h3 {
+                color:royalblue;
+            }
+            body {
+                background-color:paleturquoise
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menuBG">
+            <h1 class="sansserif" style="margin:0 0px 0 20px;">Pizza Drill Tutorial</h1></p>
+            <input id="btnOrder" type="button" onclick="getReceipt()" value="Place Order">
+            <form id="frmMenu"></form>
+            <div class="menu left">
+                <h3 class="monospace">Size:</h3>
+                <input class="size" type="radio" name="Size"
+                    value="Personal Pizza">Personal Pizza<br>
+                <input class="size" type="radio" name="Size"
+                    value="Small Pizza">Small Pizza<br>
+                <input class="size" type="radio" name="Size"
+                    value="Medium Pizza">Medium Pizza<br>
+                <input class="size" type="radio" name="Size"
+                    value="Large Pizza">Large Pizza<br>
+                <input class="size" type="radio" name="Size"
+                    value="Extra Large Pizza">Extra Large Pizza<br>
+            </div>
+            <div class="menu center">
+                <h3 class="monospace">Vegetables:</h3>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Mushrooms">Mushrooms<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Onions">Onions<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Olives">Olives<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Tomatoes">Tomatoes<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Green Peppers">Green Peppers<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Pineapple">Pineapple<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Banana Peppers">Banana Peppers<br>
+            </div>
+            <div class="menu right">
+                <h3 class="monospace">Meats:</h3>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Pepperoni">Pepperoni<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Sausage">Sausage<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Canadian Bacon">Canadian Bacon<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Ground Beef">Ground Beef<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Anchovy">Anchovy<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Chicken">Chicken<br>
+                <input class="toppings" type="checkbox" name="Topping"
+                    value="Salami">Salami<br>
+            </div>
+            <div id="cart">
+                <div id="showText"></div>
+                <div id="totalPrices"></div>
+            </div>
+        </div>
+    </body>
+</html>
