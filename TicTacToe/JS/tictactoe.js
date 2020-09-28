@@ -4,11 +4,11 @@ let activePlayer = 'X';
 let selectedSquares = [];
 
 //This function is for playing an x or o in a square.
-function placeXorO(squareNumber) {
+function placeXOrO(squareNumber) {
     //This condition ensures a square hasn't been slected already.
     //The .some() method is used to check each element of selectedSquare array to
     //see is it contains the square number clicked on.
-    (!selectedSquares.some(element => element.includes(squareNumber))) {
+    if (!selectedSquares.some(element => element.includes(squareNumber))) {
         //This variable retrieves the html element id that was clicked.
         let select = document.getElementById(squareNumber);
         //This condition checks who's turn it is.
@@ -41,11 +41,11 @@ function placeXorO(squareNumber) {
             disableClick();
             //This function waits 1 second before placing the image
             //and enabling click.
-            setTimeout(function(){ computersTurn();}, 1000);
+            setTimeout(function (){ computersTurn() ; }, 1000);
         }
         //Returning true is needed for our computersTrun() function to work.
         return true;
-        }
+    }
         //This function results in a random square being selected.
         function computersTurn() {
             //This boolean is needed for our while loop.
@@ -58,9 +58,9 @@ function placeXorO(squareNumber) {
                 //A random number between 0 and 8 is selected
                 pickASquare = String(Math.floor(Math.random() * 9));
                 //If the random number evaluates returns trus, the square hasn't been selected yet.
-                if (placeXorO(pickASquare)) {
+                if (placeXOrO(pickASquare)) {
                     //This line calls the function.
-                    placeXorO(pickASquare);
+                    placeXOrO(pickASquare);
                     //This changes our boolean and ends the loop.
                     success = true;
                 };
@@ -92,19 +92,19 @@ function checkWinConditions() {
     else if (arrayIncludes('3O', '4O', '5O')) {drawWinLine(50, 100, 558, 100);}
     //O 6, 7, 8 condition.
     else if (arrayIncludes('6O', '7O', '8O')) {drawWinLine(50, 304, 558, 304);}
-   //O 0, 3, 6 condition.
-   else if (arrayIncludes('0O', '3O', '6O')) {drawWinLine(100, 50, 100, 558);}
-   //O 1, 4, 7 condition.
-   else if (arrayIncludes('1O', '4O', '7O')) {drawWinLine(304, 50, 304, 558);}
-   //O 2, 5, 8 condition.
-   else if (arrayIncludes('2O', '5O', '8O')) {drawWinLine(508, 50, 508, 558);}
-   //O 6, 4, 2 condition.
-   else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 508, 510, 90);}
-   //O 0, 4, 8 condition.
-   else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine(100, 100, 520, 520);}
+    //O 0, 3, 6 condition.
+    else if (arrayIncludes('0O', '3O', '6O')) {drawWinLine(100, 50, 100, 558);}
+    //O 1, 4, 7 condition.
+    else if (arrayIncludes('1O', '4O', '7O')) {drawWinLine(304, 50, 304, 558);}
+    //O 2, 5, 8 condition.
+    else if (arrayIncludes('2O', '5O', '8O')) {drawWinLine(508, 50, 508, 558);}
+    //O 6, 4, 2 condition.
+    else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 508, 510, 90);}
+    //O 0, 4, 8 condition.
+    else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine(100, 100, 520, 520);}
    //This condition checks for tie. If none of the above conditions register
    //and 9 squares are selected, the code executes.
-   else if (selectedSquares.length>= 9) {
+   else if (selectedSquares.length >= 9) {
        //THis function plays the tie game sound.
        audio('./media/tie.mp3');
        //This function sets a .3 second timer before the resetGame is called.
@@ -142,7 +142,7 @@ function audio(audioURL) {
 //This function utilizes html canvas to draw win lines.
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line accesses our html canvas element.
-    const canva = document.getElementById('win-lines');
+    const canvas = document.getElementById('win-lines');
     //This line gives us access to methods and properties to use on canvas.
     const c = canvas.getContext('2d');
     //This line indicates where the start of a lines x axis is.
@@ -204,7 +204,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This line disallows cliking while the win sound is playing
         disableClick();
         //This line plays the win sounds.
-        audio('./media/WinGame.mp3');
+        audio('./media/winGame.mp3');
         animateLineDrawing();
         //This line waits 1 second.
         //Then, clears canvas, resets game, and allows clicking again.

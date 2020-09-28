@@ -5,7 +5,7 @@
     /*This property centers our container*/
     margin: 0 auto;
     /*50 px down from top*/
-    margin-top:50px;
+    margin-top: 50px;
 }
 table {
     /*This property collapse table borders into 1 border.*/
@@ -21,7 +21,7 @@ td {
     /*This property removes default padding*/
     padding: 0px;
     width: 200px;
-    height:200px;
+    height: 200px;
 }
 canvas {
     /*This property sets the position of our canvas to the top left corner of our container.*/
