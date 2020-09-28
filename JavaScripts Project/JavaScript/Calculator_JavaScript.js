@@ -12,6 +12,7 @@ const Calculator = {
 
 //This modifies values each time a button is clicked
 function Input_Digit(digit) {
+    const { Display_Value, Wait_Second_Operand } = Calculator;
     //we are checking to see if Wait_Second_Operand is true and set
     //Display_Value to the key that was clicked
     if (Wait_Second_Operand === true) {
@@ -58,6 +59,8 @@ function Handle_Operator(Next_Operator) {
             //operator is executed
             let result = Perform_Calculation[operator](Value_Now, Value_of_Input);
             //here we add a fixed amount of numbers after the decimal
+            result = Number(result).toFixed(9)
+            //This will remove any trailing 0's
             result = (result * 1).toString()
             Calculator.Display_Value = parseFloat(result);
             Calculator.First_Operand = parseFloat(result);
@@ -65,6 +68,7 @@ function Handle_Operator(Next_Operator) {
      }
      Calculator.Wait_Second_Operand = true;
      Calculator.operator = Next_Operator;
+    }
      const Perform_Calculation = {
          '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
          '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
@@ -83,7 +87,7 @@ function Handle_Operator(Next_Operator) {
          const display = document.querySelector('.calculator-screen');
          display.value = Calculator.Display_Value;
      }
-    }
+    
 
     Update_Display();
     //This section monitors button clicks
@@ -117,4 +121,3 @@ function Handle_Operator(Next_Operator) {
         Input_Digit(target.value);
         Update_Display();
     })
-    
